@@ -39,7 +39,7 @@ const sizes = [
 ];
 
 export default function InteractiveAssessment() {
-  alert('InteractiveAssessment component loaded!');
+  console.log('InteractiveAssessment component loaded!');
   const [selectedTarget, setSelectedTarget] = useState(targets[0]);
   const [selectedDriver, setSelectedDriver] = useState(drivers[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[0]);

@@ -16,7 +16,7 @@ import {
 import { CATEGORIES } from '@/data/services';
 
 export default function ContactPage() {
-  alert('ContactPage component loaded!');
+  console.log('ContactPage component loaded!');
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
