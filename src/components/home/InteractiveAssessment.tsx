@@ -39,7 +39,6 @@ const sizes = [
 ];
 
 export default function InteractiveAssessment() {
-  console.log('InteractiveAssessment component loaded!');
   const [selectedTarget, setSelectedTarget] = useState(targets[0]);
   const [selectedDriver, setSelectedDriver] = useState(drivers[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
@@ -50,7 +49,6 @@ export default function InteractiveAssessment() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitting assessment form:', { email, target: selectedTarget.name, driver: selectedDriver.name, size: selectedSize.name, estimatedDays });
     if (email) {
       try {
         const response = await fetch('/api/assessment', {
@@ -67,14 +65,10 @@ export default function InteractiveAssessment() {
           }),
         });
 
-        console.log('Response status:', response.status);
-        const result = await response.json();
-        console.log('Response data:', result);
-
         if (response.ok) {
           setSubmitted(true);
         } else {
-          console.error('Failed to submit form', result);
+          console.error('Failed to submit form');
           alert('Failed to submit form. Please try again.');
         }
       } catch (error) {

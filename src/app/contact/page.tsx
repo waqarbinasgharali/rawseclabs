@@ -16,7 +16,6 @@ import {
 import { CATEGORIES } from '@/data/services';
 
 export default function ContactPage() {
-  console.log('ContactPage component loaded!');
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -31,7 +30,6 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Submitting contact form:', formData);
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -41,14 +39,10 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
-      console.log('Response status:', response.status);
-      const result = await response.json();
-      console.log('Response data:', result);
-
       if (response.ok) {
         setSubmitted(true);
       } else {
-        console.error('Failed to submit form', result);
+        console.error('Failed to submit form');
         alert('Failed to submit form. Please try again.');
       }
     } catch (error) {
