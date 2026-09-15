@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /archive/
+
+Sitemap: https://www.rawseclabs.com/sitemap.xml
