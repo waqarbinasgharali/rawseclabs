@@ -16,6 +16,7 @@ import {
 import { CATEGORIES } from '@/data/services';
 
 export default function ContactPage() {
+  alert('ContactPage component loaded!');
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -28,9 +29,33 @@ export default function ContactPage() {
     ndaRequired: true
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    alert('handleSubmit called!');
+    console.log('Submitting contact form:', formData);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('Response status:', response.status);
+      const result = await response.json();
+      console.log('Response data:', result);
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error('Failed to submit form', result);
+        alert('Failed to submit form. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to submit form. Please try again.');
+    }
   };
 
   return (
