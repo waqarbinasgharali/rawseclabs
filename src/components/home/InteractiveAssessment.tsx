@@ -50,7 +50,6 @@ export default function InteractiveAssessment() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('handleSubmit called!');
     console.log('Submitting assessment form:', { email, target: selectedTarget.name, driver: selectedDriver.name, size: selectedSize.name, estimatedDays });
     if (email) {
       try {

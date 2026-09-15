@@ -31,7 +31,6 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('handleSubmit called!');
     console.log('Submitting contact form:', formData);
     try {
       const response = await fetch('/api/contact', {
