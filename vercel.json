@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd rawseclabs-nextjs && npm run build",
-  "outputDirectory": "rawseclabs-nextjs/.next",
-  "installCommand": "cd rawseclabs-nextjs && npm install"
-}
