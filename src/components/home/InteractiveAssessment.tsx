@@ -17,7 +17,7 @@ import {
 const targets = [
   { id: 'web-api', name: 'Web Applications & REST/GraphQL APIs', defaultDays: 6, tag: 'OWASP Top 10' },
   { id: 'cloud', name: 'Cloud Infrastructure (AWS, Azure, GCP)', defaultDays: 5, tag: 'CIS Benchmark' },
-  { id: 'network', name: 'Internal & External Network Perimeter', defaultDays: 7, tag: 'CREST Certified' },
+  { id: 'network', name: 'Internal & External Network Perimeter', defaultDays: 7, tag: 'NIST Aligned' },
   { id: 'web3', name: 'Smart Contracts & Web3 Protocol', defaultDays: 8, tag: 'Formal Verification' },
   { id: 'mobile', name: 'Mobile App (iOS & Android)', defaultDays: 6, tag: 'OWASP MASVS' },
   { id: 'redteam', name: 'Full Adversary Red Team Simulation', defaultDays: 14, tag: 'Threat-Led APT' },
@@ -79,7 +79,7 @@ export default function InteractiveAssessment() {
   };
 
   return (
-    <section className="py-24 bg-[#070b16] relative overflow-hidden border-t border-white/5">
+    <section className="py-24 bg-white dark:bg-[#070b16] relative overflow-hidden border-t border-slate-200 dark:border-white/5">
       
       {/* Background Accent */}
       <div className="absolute inset-0 cyber-grid-dense opacity-20 pointer-events-none" />
@@ -93,10 +93,10 @@ export default function InteractiveAssessment() {
             <Zap className="w-3.5 h-3.5" />
             INTERACTIVE SECURITY SCOPING ENGINE
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Estimate Your Pentest Scope in 60 Seconds
           </h2>
-          <p className="text-base text-slate-400">
+          <p className="text-base text-slate-600 dark:text-slate-400">
             Select your assessment target, compliance requirements, and architecture scope to receive an instant engagement duration estimate and tailored testing blueprint.
           </p>
         </div>
@@ -105,7 +105,7 @@ export default function InteractiveAssessment() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Controls Column */}
-          <div className="lg:col-span-7 space-y-8 p-6 sm:p-8 rounded-2xl bg-[#0b101e] border border-white/10 shadow-2xl backdrop-blur-xl">
+          <div className="lg:col-span-7 space-y-8 p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0b101e] border border-slate-200 dark:border-white/10 shadow-2xl backdrop-blur-xl">
             
             {/* Step 1: Select Target */}
             <div>
@@ -120,14 +120,14 @@ export default function InteractiveAssessment() {
                     onClick={() => setSelectedTarget(t)}
                     className={`p-3.5 rounded-xl text-left border transition-all ${
                       selectedTarget.id === t.id
-                        ? 'bg-cyan-950/40 border-cyan-400 text-white shadow-lg shadow-cyan-950/40'
-                        : 'bg-white/[0.02] border-white/5 text-slate-400 hover:text-slate-200 hover:bg-white/[0.05]'
+                        ? 'bg-cyan-50 dark:bg-cyan-950/40 border-cyan-400 text-slate-900 dark:text-white shadow-lg shadow-cyan-950/5 dark:shadow-cyan-950/40'
+                        : 'bg-slate-50 dark:bg-white/[0.02] border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.05]'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-bold">{t.name}</span>
                     </div>
-                    <span className="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-white/5 text-cyan-300">
+                    <span className="inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-white/5 text-cyan-600 dark:text-cyan-300">
                       {t.tag}
                     </span>
                   </button>
@@ -148,8 +148,8 @@ export default function InteractiveAssessment() {
                     onClick={() => setSelectedDriver(d)}
                     className={`p-2.5 rounded-lg text-xs font-medium text-center border transition-all ${
                       selectedDriver.id === d.id
-                        ? 'bg-emerald-950/40 border-emerald-400 text-emerald-200 shadow-md shadow-emerald-950/30'
-                        : 'bg-white/[0.02] border-white/5 text-slate-400 hover:text-slate-200 hover:bg-white/[0.05]'
+                        ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-400 text-emerald-700 dark:text-emerald-200 shadow-md shadow-emerald-950/5 dark:shadow-emerald-950/30'
+                        : 'bg-slate-50 dark:bg-white/[0.02] border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.05]'
                     }`}
                   >
                     {d.name}
@@ -171,8 +171,8 @@ export default function InteractiveAssessment() {
                     onClick={() => setSelectedSize(s)}
                     className={`p-3 rounded-xl text-left border transition-all ${
                       selectedSize.id === s.id
-                        ? 'bg-purple-950/40 border-purple-400 text-white'
-                        : 'bg-white/[0.02] border-white/5 text-slate-400 hover:text-slate-200 hover:bg-white/[0.05]'
+                        ? 'bg-purple-50 dark:bg-purple-950/40 border-purple-400 text-slate-900 dark:text-white shadow-md shadow-purple-950/5'
+                        : 'bg-slate-50 dark:bg-white/[0.02] border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/[0.05]'
                     }`}
                   >
                     <span className="text-xs font-semibold block">{s.name}</span>
@@ -184,13 +184,13 @@ export default function InteractiveAssessment() {
           </div>
 
           {/* Results Column */}
-          <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#0c1222] to-[#080d19] border border-cyan-500/30 shadow-2xl relative">
+          <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-50 to-slate-100 dark:from-[#0c1222] dark:to-[#080d19] border border-slate-200 dark:border-cyan-500/30 shadow-2xl relative">
             <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="flex items-center justify-between pb-6 border-b border-white/10">
+            <div className="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-white/10">
               <div>
-                <span className="text-xs uppercase tracking-widest text-slate-400 font-mono">Tailored Proposal Scope</span>
-                <h3 className="text-xl font-bold text-white mt-1">{selectedTarget.name}</h3>
+                <span className="text-xs uppercase tracking-widest text-slate-500 dark:text-slate-400 font-mono">Tailored Proposal Scope</span>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mt-1">{selectedTarget.name}</h3>
               </div>
               <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
                 <Calculator className="w-6 h-6" />
@@ -198,38 +198,38 @@ export default function InteractiveAssessment() {
             </div>
 
             {/* Duration Estimation */}
-            <div className="py-6 border-b border-white/10 space-y-4">
+            <div className="py-6 border-b border-slate-200 dark:border-white/10 space-y-4">
               <div className="flex items-baseline justify-between">
-                <span className="text-sm text-slate-300">Estimated Duration:</span>
-                <span className="text-3xl font-extrabold text-cyan-400 font-mono flex items-center gap-1.5">
+                <span className="text-sm text-slate-700 dark:text-slate-300">Estimated Duration:</span>
+                <span className="text-3xl font-extrabold text-cyan-600 dark:text-cyan-400 font-mono flex items-center gap-1.5">
                   <Clock className="w-6 h-6" />
                   {estimatedDays} - {estimatedDays + 2} Days
                 </span>
               </div>
-              <p className="text-xs text-slate-400">
-                Executed by CREST-aligned senior penetration testers. Includes manual threat validation and proof-of-concept exploit chains.
+              <p className="text-xs text-slate-600 dark:text-slate-400">
+                Executed by industry-standard senior penetration testers using NIST and OWASP frameworks. Includes manual threat validation and proof-of-concept exploit chains.
               </p>
             </div>
 
             {/* Included Deliverables */}
-            <div className="py-6 border-b border-white/10 space-y-3 text-xs">
-              <span className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold block">
+            <div className="py-6 border-b border-slate-200 dark:border-white/10 space-y-3 text-xs">
+              <span className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 font-bold block">
                 Standard Inclusions:
               </span>
-              <div className="flex items-center gap-2 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
                 <span>Executive Summary & Risk Matrix for Auditors / Board</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
                 <span>Zero False Positive Technical Report with CVSS 3.1</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
                 <span>Complimentary Retest of Remediated Findings</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <div className="flex items-center gap-2 text-slate-700 dark:text-slate-200">
+                <CheckCircle2 className="w-4 h-4 text-emerald-500 dark:text-emerald-400 shrink-0" />
                 <span>Formal Attestation of Compliance Certificate</span>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function InteractiveAssessment() {
             <div className="pt-6">
               {!submitted ? (
                 <form onSubmit={handleSubmit} className="space-y-3">
-                  <p className="text-xs text-slate-300 font-medium">
+                  <p className="text-xs text-slate-600 dark:text-slate-300 font-medium">
                     Send detailed formal scope and pricing breakdown to your email:
                   </p>
                   <div className="flex gap-2">
@@ -247,8 +247,8 @@ export default function InteractiveAssessment() {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="corporate@company.com"
-                      className="flex-1 px-4 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-400"
+                      placeholder="name@company.com"
+                      className="flex-1 px-4 py-2.5 rounded-xl bg-white dark:bg-white/[0.04] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-400"
                     />
                     <button
                       type="submit"
@@ -264,10 +264,10 @@ export default function InteractiveAssessment() {
                   </p>
                 </form>
               ) : (
-                <div className="p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-center space-y-2">
-                  <CheckCircle2 className="w-8 h-8 text-emerald-400 mx-auto" />
-                  <h4 className="text-sm font-bold text-emerald-300">Scoping Inquiry Received</h4>
-                  <p className="text-xs text-slate-300">
+                <div className="p-4 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-500/30 text-center space-y-2">
+                  <CheckCircle2 className="w-8 h-8 text-emerald-500 dark:text-emerald-400 mx-auto" />
+                  <h4 className="text-sm font-bold text-emerald-700 dark:text-emerald-300">Scoping Inquiry Received</h4>
+                  <p className="text-xs text-slate-600 dark:text-slate-300">
                     A senior RawSecLabs technical director will review your scope for <strong>{selectedTarget.name}</strong> and contact you at <strong>{email}</strong> within 4 business hours.
                   </p>
                 </div>

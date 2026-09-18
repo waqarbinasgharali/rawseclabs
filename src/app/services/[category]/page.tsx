@@ -51,7 +51,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   return (
-    <div className="pt-32 pb-24 bg-[#060911] min-h-screen relative">
+    <div className="pt-32 pb-24 bg-slate-50 dark:bg-[#060911] min-h-screen relative">
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] radial-glow pointer-events-none" />
 
@@ -59,34 +59,34 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs font-mono text-slate-500 mb-8">
-          <Link href="/" className="hover:text-cyan-400">Home</Link>
+          <Link href="/" className="hover:text-cyan-600 dark:hover:text-cyan-400">Home</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <Link href="/services" className="hover:text-cyan-400">Services</Link>
+          <Link href="/services" className="hover:text-cyan-600 dark:hover:text-cyan-400">Services</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-cyan-400 font-bold">{category.name}</span>
+          <span className="text-cyan-600 dark:text-cyan-400 font-bold">{category.name}</span>
         </nav>
 
         {/* Hero Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-600 dark:text-cyan-400">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 dark:bg-cyan-400 animate-pulse" />
             CORE PRACTICE DOMAIN &bull; {category.services.length} ENGAGEMENTS
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             {category.name}
           </h1>
-          <p className="text-xl font-medium text-cyan-300">
+          <p className="text-xl font-medium text-cyan-600 dark:text-cyan-300">
             {category.tagline}
           </p>
-          <p className="text-base text-slate-300 leading-relaxed">
+          <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
             {category.desc}
           </p>
         </div>
 
         {/* Services List */}
         <div className="space-y-6">
-          <h2 className="text-xl font-bold text-white flex items-center gap-2">
-            <Layers className="w-5 h-5 text-cyan-400" />
+          <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+            <Layers className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
             Available Assessments in {category.name}
           </h2>
 
@@ -94,28 +94,28 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             {category.services.map((service) => (
               <div
                 key={service.slug}
-                className="flex flex-col justify-between p-6 rounded-2xl bg-[#090e1b] border border-white/10 hover:border-cyan-500/40 transition-all duration-300 shadow-xl group"
+                className="flex flex-col justify-between p-6 rounded-2xl bg-white dark:bg-[#090e1b] border border-slate-200 dark:border-white/10 hover:border-cyan-500/40 transition-all duration-300 shadow-xl group"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/5 text-slate-400">
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400">
                       {service.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-300 transition-colors">
                     {service.name}
                   </h3>
 
-                  <p className="text-xs text-slate-400 mt-2.5 line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-2.5 line-clamp-3 leading-relaxed">
                     {service.shortDesc}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
+                <div className="mt-6 pt-4 border-t border-slate-200 dark:border-white/5 flex items-center justify-between">
                   <Link
                     href={`/services/${category.slug}/${service.slug}`}
-                    className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group/btn"
+                    className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 flex items-center gap-1 group/btn"
                   >
                     <span>View Methodology</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
@@ -123,7 +123,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
                   <Link
                     href="/contact"
-                    className="text-[11px] font-medium text-slate-400 hover:text-white"
+                    className="text-[11px] font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                   >
                     Request Scope &rarr;
                   </Link>
@@ -134,10 +134,10 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-cyan-950/30 via-[#0a0f1d] to-slate-900 border border-cyan-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-cyan-50 dark:from-cyan-950/30 via-slate-100 dark:via-[#0a0f1d] to-slate-100 dark:to-slate-900 border border-cyan-200 dark:border-cyan-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2">
-            <h3 className="text-2xl font-bold text-white">Need a customized {category.name} scope?</h3>
-            <p className="text-xs text-slate-400 max-w-xl">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Need a customized {category.name} scope?</h3>
+            <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xl">
               Our principal consultants will assess your architecture, compliance drivers, and asset complexity to formulate a non-destructive, high-value testing plan.
             </p>
           </div>

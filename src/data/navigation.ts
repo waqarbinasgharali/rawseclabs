@@ -28,7 +28,7 @@ export const FOOTER_LINKS = {
     { name: 'Smart Contract Security', href: '/services/blockchain-web3-security/top-smart-contract-security-services' },
     { name: 'Cloud Pentest (AWS & GCP)', href: '/services/penetration-testing/amazon-web-services-penetration-testing' },
     { name: 'ISO 27001 Certification', href: '/services/compliance-audit/iso-27001-certification-services-in-the-uk' },
-    { name: 'PCI DSS QSA Audits', href: '/services/compliance-audit/pci-dss-qsa-company' },
+    { name: 'PCI DSS Compliance Support', href: '/services/compliance-audit/pci-dss-compliance-mapping-pre-audit-assessment' },
     { name: 'DORA TLPT Pentesting', href: '/services/data-protection-resilience/dora-tlpt-amp-penetration-testing-services' },
     { name: 'Rapid Incident Response', href: '/services/incident-response-forensics/rapid-incident-response-services' },
   ],
@@ -41,6 +41,7 @@ export const FOOTER_LINKS = {
     { name: 'Emergency Incident Hotline', href: '/contact#emergency' },
   ],
   legal: [
+    { name: 'Legal & Governance', href: '/legal-governance' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'Rules of Engagement (RoE)', href: '/roe' },

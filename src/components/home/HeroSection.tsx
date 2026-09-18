@@ -5,25 +5,28 @@ import Link from 'next/link';
 import { 
   ShieldAlert, 
   ArrowRight, 
-  Terminal, 
   CheckCircle2, 
-  Sparkles, 
-  Lock, 
-  Radio, 
-  Activity,
-  Cpu
+  Terminal, 
+  Activity
 } from 'lucide-react';
 
 const telemetryEvents = [
-  { time: '17:42:01', type: 'PENTEST', msg: 'Zero-day auth bypass identified in API Gateway (PoC verified)' },
-  { time: '17:42:08', type: 'RED-TEAM', msg: 'Adversary simulation: lateral movement detected & contained' },
-  { time: '17:42:15', type: 'WEB3', msg: 'Smart contract formal verification: reentrancy guard certified' },
-  { time: '17:42:24', type: 'COMPLIANCE', msg: 'SOC 2 Type II penetration evidence exported for auditor' },
-  { time: '17:42:31', type: 'INCIDENT', msg: '24/7 Emergency triage team deployed: ransomware vector neutralized' },
+  { type: 'PENTEST' as const, msg: 'Zero-day auth bypass identified in API Gateway (PoC verified)' },
+  { type: 'RED-TEAM' as const, msg: 'Adversary simulation: lateral movement detected & contained' },
+  { type: 'WEB3' as const, msg: 'Smart contract formal verification: reentrancy guard certified' },
+  { type: 'COMPLIANCE' as const, msg: 'SOC 2 Type II penetration evidence exported for auditor' },
+  { type: 'INCIDENT' as const, msg: '24/7 Emergency triage team deployed: ransomware vector neutralized' },
 ];
 
 export default function HeroSection() {
   const [activeEvent, setActiveEvent] = useState(0);
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(t);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -32,8 +35,21 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const timeTimer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+    return () => clearInterval(timeTimer);
+  }, []);
+
+  const getDynamicTimestamp = (index: number) => {
+    const time = new Date(currentTime);
+    time.setSeconds(time.getSeconds() - (telemetryEvents.length - 1 - index) * 7);
+    return time.toLocaleTimeString('en-GB', { hour12: false });
+  };
+
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#060911]">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-slate-50 dark:bg-[#060911]">
       
       {/* Background Grids & Radial Glows */}
       <div className="absolute inset-0 cyber-grid opacity-30 pointer-events-none" />
@@ -45,15 +61,15 @@ export default function HeroSection() {
         
         {/* Top Announcement Pill */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-cyan-500/30 text-xs text-slate-300 shadow-xl shadow-cyan-950/40 backdrop-blur-xl">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-white/[0.04] border border-cyan-200 dark:border-cyan-500/30 text-xs text-slate-600 dark:text-slate-300 shadow-xl shadow-cyan-900/5 dark:shadow-cyan-950/40 backdrop-blur-xl">
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
             </span>
-            <span className="font-mono text-cyan-300 font-semibold">RawSecLabs Threat Telemetry</span>
-            <span className="text-slate-500">&bull;</span>
-            <span className="text-slate-300 hidden sm:inline">CREST-Aligned Senior Consultants &bull; No Offshoring</span>
-            <Link href="/assessment" className="text-cyan-400 hover:text-cyan-300 flex items-center gap-1 font-semibold ml-1 group">
+            <span className="font-mono text-cyan-600 dark:text-cyan-300 font-semibold">RawSecLabs Threat Telemetry</span>
+            <span className="text-slate-300 dark:text-slate-500">&bull;</span>
+            <span className="hidden sm:inline">Elite Security Consultants &bull; Global Elite Pentester</span>
+            <Link href="/assessment" className="text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 flex items-center gap-1 font-semibold ml-1 group">
               Estimate Scope <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
@@ -61,14 +77,14 @@ export default function HeroSection() {
 
         {/* Hero Headlines */}
         <div className="text-center max-w-4xl mx-auto space-y-6">
-          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
             Elite Offensive Security. <br />
             <span className="bg-gradient-to-r from-cyan-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">
               Adversary Simulation.
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto font-light">
             <strong>RawSecLabs</strong> protects high-growth tech firms, fintechs, and enterprises worldwide. We simulate real-world cyberattacks, audit smart contracts, and ensure effortless compliance with zero false positives.
           </p>
 
@@ -84,18 +100,18 @@ export default function HeroSection() {
 
             <Link
               href="/services"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] text-slate-200 border border-white/10 hover:border-cyan-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2 backdrop-blur-md"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white dark:bg-white/[0.04] hover:bg-slate-50 dark:hover:bg-white/[0.08] text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-white/10 hover:border-cyan-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2 backdrop-blur-md shadow-sm"
             >
-              <span>Explore All 58+ Services</span>
-              <ShieldAlert className="w-4 h-4 text-cyan-400" />
+              <span>Explore All 60+ Services</span>
+              <ShieldAlert className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             </Link>
           </div>
 
           {/* Trust Badges */}
-          <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+          <div className="pt-8 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-500 dark:text-slate-400">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-              <span>CREST-Accredited Methodology</span>
+              <span>Rigorous, Threat-Led Testing Methodology</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-cyan-400" />
@@ -114,7 +130,7 @@ export default function HeroSection() {
 
         {/* Live Threat Terminal Simulation */}
         <div className="mt-14 max-w-3xl mx-auto">
-          <div className="rounded-2xl border border-white/10 bg-[#090d18]/90 shadow-2xl shadow-black/80 overflow-hidden backdrop-blur-2xl">
+          <div className="rounded-2xl border border-slate-300 dark:border-white/10 bg-slate-900 dark:bg-[#090d18]/90 shadow-2xl shadow-slate-900/20 dark:shadow-black/80 overflow-hidden backdrop-blur-2xl">
             
             {/* Terminal Top Bar */}
             <div className="px-4 py-3 bg-white/[0.03] border-b border-white/10 flex items-center justify-between text-xs font-mono text-slate-400">
@@ -135,7 +151,7 @@ export default function HeroSection() {
 
             {/* Terminal Content */}
             <div className="p-6 font-mono text-xs space-y-3">
-              <div className="text-slate-500">// Real-time offensive operations telemetry & security verification</div>
+              <div className="text-slate-500">{`// Real-time offensive operations telemetry & security verification`}</div>
               
               {telemetryEvents.map((evt, idx) => (
                 <div 
@@ -146,7 +162,7 @@ export default function HeroSection() {
                       : 'opacity-40 text-slate-400'
                   }`}
                 >
-                  <span className="text-slate-500 shrink-0">[{evt.time}]</span>
+                  <span className="text-slate-500 shrink-0">[{mounted ? getDynamicTimestamp(idx) : '--:--:--'}]</span>
                   <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider shrink-0 ${
                     evt.type === 'PENTEST' ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30' :
                     evt.type === 'RED-TEAM' ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30' :
@@ -166,7 +182,7 @@ export default function HeroSection() {
               <div className="pt-2 flex items-center justify-between text-[11px] text-slate-400 border-t border-white/5">
                 <span className="flex items-center gap-1.5">
                   <Activity className="w-3.5 h-3.5 text-cyan-400" />
-                  Operator Status: <strong>CREST Certified Red Teamers On-Duty</strong>
+                  Operator Status: <strong>Expert Tier-1 Red Teamers On-Duty</strong>
                 </span>
                 <span className="text-emerald-400">Target Resolution: 100% Deterministic</span>
               </div>

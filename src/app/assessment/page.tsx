@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function AssessmentPage() {
   return (
-    <div className="pt-20 min-h-screen bg-[#060911]">
+    <div className="pt-20 min-h-screen bg-slate-50 dark:bg-[#060911]">
       <InteractiveAssessment />
       <FaqSection />
     </div>

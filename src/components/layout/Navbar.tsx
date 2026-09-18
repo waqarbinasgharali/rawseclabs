@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { 
   ShieldAlert, 
@@ -17,9 +18,14 @@ import {
   ChevronDown, 
   ArrowRight,
   PhoneCall,
-  Terminal
+  Terminal,
+  CheckCircle,
+  Users
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/services';
+import { INDUSTRIES } from '@/data/industries';
+import { BookOpen, FileText, Newspaper, Search } from 'lucide-react';
+import { ThemeToggle } from '@/components/theme/ThemeToggle';
 
 const categoryIcons: Record<string, React.ReactNode> = {
   'penetration-testing': <ShieldAlert className="w-5 h-5 text-cyan-400" />,
@@ -35,6 +41,8 @@ const categoryIcons: Record<string, React.ReactNode> = {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -47,8 +55,13 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setIsOpen(false);
-    setServicesOpen(false);
+    const timer = setTimeout(() => {
+      setIsOpen(false);
+      setServicesOpen(false);
+      setIndustriesOpen(false);
+      setResourcesOpen(false);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return (
@@ -64,10 +77,14 @@ export default function Navbar() {
           
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 via-slate-900 to-black border border-cyan-500/40 flex items-center justify-center shadow-lg shadow-cyan-500/10 group-hover:border-cyan-400 transition-colors">
-              <ShieldAlert className="w-6 h-6 text-cyan-400 transition-transform group-hover:scale-110 duration-300" />
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400" />
+            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden">
+              <Image 
+                src="/logos/logos.png" 
+                alt="RawSecLabs Logo" 
+                width={48} 
+                height={48} 
+                className="w-full h-full object-contain transition-transform group-hover:scale-110 duration-300"
+              />
             </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-xl tracking-tight text-white flex items-center">
@@ -88,31 +105,34 @@ export default function Navbar() {
               onMouseEnter={() => setServicesOpen(true)}
               onMouseLeave={() => setServicesOpen(false)}
             >
-              <button 
-                className={`px-3 py-2 text-sm font-medium rounded-lg flex items-center gap-1.5 transition-colors ${
-                  servicesOpen || pathname.startsWith('/services') 
-                    ? 'text-cyan-400 bg-white/5' 
-                    : 'text-slate-300 hover:text-white hover:bg-white/5'
-                }`}
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
+              <div className="flex items-center gap-1.5">
+                <Link 
+                  href="/services"
+                  className={`px-3 py-2 text-sm font-medium rounded-lg flex items-center gap-1.5 transition-colors ${
+                    servicesOpen || pathname.startsWith('/services') 
+                      ? 'text-cyan-400 bg-white/5' 
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <span>Services</span>
+                </Link>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''} text-slate-300`} />
+              </div>
 
               {/* Mega-menu Dropdown */}
               {servicesOpen && (
                 <div className="absolute top-full -left-20 w-[840px] pt-2 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="bg-[#0b101d] border border-cyan-500/20 rounded-2xl p-6 shadow-2xl shadow-black/80 backdrop-blur-2xl">
-                    <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+                  <div className="bg-white dark:bg-[#0b101d] border border-slate-200 dark:border-cyan-500/20 rounded-2xl p-6 shadow-2xl shadow-slate-200/50 dark:shadow-black/80 backdrop-blur-2xl">
+                    <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-white/10">
                       <div>
-                        <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-400 flex items-center gap-2">
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 flex items-center gap-2">
                           <Terminal className="w-4 h-4" /> Comprehensive Cyber Assurance
                         </h4>
-                        <p className="text-xs text-slate-400 mt-0.5">Explore our 58+ offensive & defensive security capabilities</p>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Explore our 60+ offensive & defensive security capabilities</p>
                       </div>
                       <Link 
                         href="/services" 
-                        className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group"
+                        className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 flex items-center gap-1 group"
                       >
                         View All Services 
                         <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -124,19 +144,19 @@ export default function Navbar() {
                         <Link
                           key={cat.id}
                           href={`/services/${cat.slug}`}
-                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/[0.04] border border-transparent hover:border-white/10 transition-all group"
+                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-white/[0.04] border border-transparent hover:border-slate-300 dark:hover:border-white/10 transition-all group"
                         >
-                          <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-cyan-500/40 group-hover:bg-cyan-950/30 transition-colors">
-                            {categoryIcons[cat.slug] || <ShieldAlert className="w-5 h-5 text-cyan-400" />}
+                          <div className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 group-hover:border-cyan-500/40 group-hover:bg-cyan-100 dark:group-hover:bg-cyan-950/30 transition-colors">
+                            {categoryIcons[cat.slug] || <ShieldAlert className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <div className="text-sm font-semibold text-slate-100 group-hover:text-cyan-300 flex items-center justify-between">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-cyan-700 dark:group-hover:text-cyan-300 flex items-center justify-between">
                               <span className="truncate">{cat.name}</span>
-                              <span className="text-[11px] font-mono text-slate-500 group-hover:text-cyan-400">
+                              <span className="text-[11px] font-mono text-slate-500 group-hover:text-cyan-600 dark:group-hover:text-cyan-400">
                                 {cat.services.length}
                               </span>
                             </div>
-                            <p className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+                            <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-1 mt-0.5">
                               {cat.tagline}
                             </p>
                           </div>
@@ -145,14 +165,14 @@ export default function Navbar() {
                     </div>
 
                     {/* Bottom banner in mega menu */}
-                    <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between bg-cyan-950/20 -mx-6 -mb-6 p-4 rounded-b-2xl">
-                      <div className="flex items-center gap-2 text-xs text-slate-300">
+                    <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between bg-cyan-50 dark:bg-cyan-950/20 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                      <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-300">
                         <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                        <span>CREST-Aligned &bull; Zero False Positives Guarantee &bull; NDA Guaranteed</span>
+                        <span>Enterprise Grade &bull; Zero False Positives Guarantee &bull; Strict NDA</span>
                       </div>
                       <Link 
                         href="/assessment" 
-                        className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-cyan-500/20 text-cyan-300 hover:bg-cyan-500/30 border border-cyan-500/30 transition-colors"
+                        className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-cyan-100 dark:bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-200 dark:hover:bg-cyan-500/30 border border-cyan-200 dark:border-cyan-500/30 transition-colors"
                       >
                         Launch Scope Estimator
                       </Link>
@@ -162,14 +182,83 @@ export default function Navbar() {
               )}
             </div>
 
-            <Link 
-              href="/services" 
-              className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                pathname === '/services' ? 'text-cyan-400 bg-white/5' : 'text-slate-300 hover:text-white hover:bg-white/5'
-              }`}
+            {/* Industries Dropdown Trigger */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIndustriesOpen(true)}
+              onMouseLeave={() => setIndustriesOpen(false)}
             >
-              Directory
-            </Link>
+              <div className="flex items-center gap-1.5">
+                <Link 
+                  href="/industries"
+                  className={`px-3 py-2 text-sm font-medium rounded-lg flex items-center gap-1.5 transition-colors ${
+                    industriesOpen || pathname.startsWith('/industries') 
+                      ? 'text-cyan-400 bg-white/5' 
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <span>Industries</span>
+                </Link>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${industriesOpen ? 'rotate-180' : ''} text-slate-300`} />
+              </div>
+
+              {/* Industries Mega-menu Dropdown */}
+              {industriesOpen && (
+                <div className="absolute top-full -left-20 w-[640px] pt-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="bg-white dark:bg-[#0b101d] border border-slate-200 dark:border-cyan-500/20 rounded-2xl p-6 shadow-2xl shadow-slate-200/50 dark:shadow-black/80 backdrop-blur-2xl">
+                    <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-white/10">
+                      <div>
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 flex items-center gap-2">
+                          <ShieldAlert className="w-4 h-4" /> Sector-Specific Security
+                        </h4>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Industry-focused cybersecurity solutions</p>
+                      </div>
+                      <Link 
+                        href="/industries" 
+                        className="text-xs font-semibold text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 flex items-center gap-1 group"
+                      >
+                        View All Industries 
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                      </Link>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      {INDUSTRIES.map((industry) => (
+                        <Link
+                          key={industry.id}
+                          href={`/industries/${industry.slug}`}
+                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-white/[0.04] border border-transparent hover:border-slate-300 dark:hover:border-white/10 transition-all group"
+                        >
+                          <div className="text-2xl">{industry.icon}</div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-cyan-700 dark:group-hover:text-cyan-300">
+                              {industry.name}
+                            </div>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-1 mt-0.5">
+                              {industry.tagline}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+
+                    {/* Bottom banner in industries mega menu */}
+                    <div className="mt-4 pt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between bg-cyan-50 dark:bg-cyan-950/20 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                      <div className="flex items-center gap-2 text-xs text-slate-600 dark:text-slate-300">
+                        <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span>Regulatory Compliance &bull; Industry Expertise &bull; Tailored Solutions</span>
+                      </div>
+                      <Link 
+                        href="/contact" 
+                        className="text-xs font-semibold px-3 py-1.5 rounded-lg bg-cyan-100 dark:bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 hover:bg-cyan-200 dark:hover:bg-cyan-500/30 border border-cyan-200 dark:border-cyan-500/30 transition-colors"
+                      >
+                        Get Industry Assessment
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link 
               href="/assessment" 
@@ -181,13 +270,79 @@ export default function Navbar() {
             </Link>
 
             <Link 
-              href="/about" 
+              href="/rsl-signals" 
               className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
-                pathname === '/about' ? 'text-cyan-400 bg-white/5' : 'text-slate-300 hover:text-white hover:bg-white/5'
+                pathname === '/rsl-signals' ? 'text-cyan-400 bg-white/5' : 'text-slate-300 hover:text-white hover:bg-white/5'
               }`}
             >
-              About
+              RSL Signals
             </Link>
+
+            {/* Resources Dropdown Trigger */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setResourcesOpen(true)}
+              onMouseLeave={() => setResourcesOpen(false)}
+            >
+              <div className="flex items-center gap-1.5">
+                <Link 
+                  href="/resources"
+                  className={`px-3 py-2 text-sm font-medium rounded-lg flex items-center gap-1.5 transition-colors ${
+                    resourcesOpen || pathname.startsWith('/resources') 
+                      ? 'text-cyan-400 bg-white/5' 
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                  }`}
+                >
+                  <span>Resources</span>
+                </Link>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${resourcesOpen ? 'rotate-180' : ''} text-slate-300`} />
+              </div>
+
+              {/* Resources Mega-menu Dropdown */}
+              {resourcesOpen && (
+                <div className="absolute top-full -left-10 w-[640px] pt-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="bg-white dark:bg-[#0b101d] border border-slate-200 dark:border-cyan-500/20 rounded-2xl p-6 shadow-2xl shadow-slate-200/50 dark:shadow-black/80 backdrop-blur-2xl">
+                    <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-200 dark:border-white/10">
+                      <div>
+                        <h4 className="text-sm font-bold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 flex items-center gap-2">
+                          <BookOpen className="w-4 h-4" /> Resource Library
+                        </h4>
+                        <p className="text-xs text-slate-600 dark:text-slate-400 mt-0.5">Knowledge base and company information</p>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      {[
+                        { icon: BookOpen, title: 'About Us', desc: 'Who we are and how we work', href: '/about' },
+                        { icon: FileText, title: 'Publications', desc: 'Books and research papers from our team', href: '/resources/publications' },
+                        { icon: Newspaper, title: 'Media Coverage', desc: 'RawSecLabs in the press', href: '/resources/media-coverage' },
+                        { icon: Search, title: 'Research Lab', desc: 'CVEs and original vulnerability research', href: '/resources/research-lab' },
+                        { icon: CheckCircle, title: 'Sample Report', desc: 'See exactly what you receive', href: '/resources/sample-report' },
+                        { icon: Users, title: 'Careers', desc: 'Join the team', href: '/resources/careers' }
+                      ].map((resource) => (
+                        <Link
+                          key={resource.href}
+                          href={resource.href}
+                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-white/[0.04] border border-transparent hover:border-slate-300 dark:hover:border-white/10 transition-all group"
+                        >
+                          <div className="p-2 rounded-lg bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 group-hover:border-cyan-500/40 group-hover:bg-cyan-100 dark:group-hover:bg-cyan-950/30 transition-colors">
+                            <resource.icon className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-semibold text-slate-900 dark:text-slate-100 group-hover:text-cyan-700 dark:group-hover:text-cyan-300">
+                              {resource.title}
+                            </div>
+                            <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-1 mt-0.5">
+                              {resource.desc}
+                            </p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link 
               href="/contact" 
@@ -219,10 +374,15 @@ export default function Navbar() {
                 <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
               </span>
             </Link>
+
+            <div className="pl-2 border-l border-white/10">
+              <ThemeToggle />
+            </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center gap-2">
+          {/* Mobile menu button & Theme toggle */}
+          <div className="lg:hidden flex items-center gap-3">
+            <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:text-white focus:outline-none"
@@ -237,52 +397,103 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {isOpen && (
-        <div className="lg:hidden bg-[#060911] border-b border-white/10 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden bg-white dark:bg-[#060911] border-b border-slate-200 dark:border-white/10 px-4 pt-3 pb-6 space-y-3 animate-in slide-in-from-top duration-200">
           <div className="space-y-1">
             <Link
               href="/"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-cyan-400"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
               Home
             </Link>
             <Link
               href="/services"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-cyan-400"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
-              All Services (58+)
+              All Services (60+)
+            </Link>
+            <Link
+              href="/industries"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+            >
+              Industries
             </Link>
             <Link
               href="/assessment"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-cyan-400"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
               Scope Estimator Tool
             </Link>
             <Link
-              href="/about"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-cyan-400"
+              href="/rsl-signals"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
-              About RawSecLabs
+              RSL Signals
+            </Link>
+            <Link
+              href="/resources"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+            >
+              Resources
             </Link>
             <Link
               href="/contact"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-white/5 hover:text-cyan-400"
+              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
               Contact & Scoping
             </Link>
           </div>
 
+          {/* Industries in mobile */}
+          <div className="pt-2 border-t border-slate-200 dark:border-white/10">
+            <p className="px-3 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-500 mb-2">Industries</p>
+            <div className="grid grid-cols-1 gap-1">
+              {INDUSTRIES.map((industry) => (
+                <Link
+                  key={industry.id}
+                  href={`/industries/${industry.slug}`}
+                  className="flex items-center gap-2 px-3 py-1.5 text-xs text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
+                >
+                  <span>{industry.icon}</span>
+                  <span>{industry.name}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Categories in mobile */}
-          <div className="pt-2 border-t border-white/10">
-            <p className="px-3 text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Practice Areas</p>
+          <div className="pt-2 border-t border-slate-200 dark:border-white/10">
+            <p className="px-3 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-500 mb-2">Practice Areas</p>
             <div className="grid grid-cols-1 gap-1">
               {CATEGORIES.map((cat) => (
                 <Link
                   key={cat.id}
                   href={`/services/${cat.slug}`}
-                  className="flex items-center justify-between px-3 py-1.5 text-xs text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-lg"
+                  className="flex items-center justify-between px-3 py-1.5 text-xs text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
                 >
                   <span>{cat.name}</span>
                   <span className="text-[10px] font-mono text-slate-500">{cat.services.length}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Resources in mobile */}
+          <div className="pt-2 border-t border-slate-200 dark:border-white/10">
+            <p className="px-3 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-500 mb-2">Resources</p>
+            <div className="grid grid-cols-1 gap-1">
+              {[
+                { title: 'Publications', href: '/resources/publications' },
+                { title: 'Media Coverage', href: '/resources/media-coverage' },
+                { title: 'Research Lab', href: '/resources/research-lab' },
+                { title: 'Sample Report', href: '/resources/sample-report' },
+                { title: 'Careers', href: '/resources/careers' }
+              ].map((resource) => (
+                <Link
+                  key={resource.href}
+                  href={resource.href}
+                  className="block px-3 py-1.5 text-xs text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-300 hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
+                >
+                  {resource.title}
                 </Link>
               ))}
             </div>

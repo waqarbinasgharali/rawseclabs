@@ -32,30 +32,30 @@ const stats = [
 
 export default function StatsTicker() {
   return (
-    <section className="py-16 bg-[#04060c] border-y border-white/5 relative">
+    <section className="py-16 bg-white dark:bg-[#04060c] border-y border-slate-200 dark:border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((item, idx) => (
             <div 
               key={idx}
-              className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors flex flex-col justify-between"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="p-2.5 rounded-xl bg-white/5 border border-white/10">
+                <span className="p-2.5 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10">
                   {item.icon}
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-slate-500">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500">
                   METRIC 0{idx + 1}
                 </span>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-mono">
+                <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-mono">
                   {item.value}
                 </div>
-                <div className="text-sm font-bold text-slate-200 mt-1">
+                <div className="text-sm font-bold text-slate-800 dark:text-slate-200 mt-1">
                   {item.label}
                 </div>
-                <div className="text-xs text-slate-400 mt-1 leading-relaxed">
+                <div className="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
                   {item.desc}
                 </div>
               </div>

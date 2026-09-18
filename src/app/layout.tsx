@@ -2,21 +2,25 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rawseclabs.com'),
   title: {
-    default: 'RawSecLabs | CREST-Aligned Penetration Testing & Cybersecurity Assurance',
+    default: 'RawSecLabs | Advanced Penetration Testing & Bespoke Cybersecurity Assurance',
     template: '%s | RawSecLabs'
   },
-  description: 'RawSecLabs is an elite cybersecurity firm providing CREST-aligned penetration testing, adversary simulations, smart contract audits, and compliance advisory.',
+  description: 'Expert penetration testing and technical security assessments tailored for enterprises and compliance requirements.',
   keywords: [
     'RawSecLabs',
     'penetration testing',
     'adversary simulation',
     'red team',
     'smart contract security',
-    'CREST accredited pentest',
+    'Global penetration testing',
+    'professional red teaming',
+    'industry standard pentest',
+    'corporate cyber security audit',
     'SOC 2 compliance pentest',
     'ISO 27001 audit evidence',
     'web application pentest UK US',
@@ -38,7 +42,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'RawSecLabs | Elite Penetration Testing & Cybersecurity Assurance',
-    description: 'CREST-aligned penetration testing, adversary simulations, and enterprise security audits with zero false positives.',
+    description: 'Advanced penetration testing, adversary simulations, and enterprise security audits with zero false positives.',
     url: 'https://www.rawseclabs.com',
     siteName: 'RawSecLabs',
     locale: 'en_US',
@@ -47,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'RawSecLabs | Offensive Security & Adversary Simulation',
-    description: 'CREST-aligned penetration testing, adversary simulations, and enterprise security audits with zero false positives.',
+    description: 'Advanced penetration testing, adversary simulations, and enterprise security audits with zero false positives.',
     creator: '@rawseclabs',
   },
   alternates: {
@@ -61,16 +65,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="bg-[#060911] text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-black">
-        <Navbar />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+      <body className="bg-slate-50 text-slate-900 dark:bg-[#060911] dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-black">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

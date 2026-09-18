@@ -35,21 +35,21 @@ export const CATEGORIES: ServiceCategory[] = [
     "id": "penetration-testing",
     "slug": "penetration-testing",
     "name": "Penetration Testing",
-    "tagline": "CREST-Accredited Security Assessments & Threat Validation",
+    "tagline": "Elite Security Assessments & Threat Validation",
     "desc": "Offensive penetration testing designed to find, exploit, and remediate high-impact vulnerabilities before adversaries exploit them.",
     "icon": "ShieldAlert",
     "color": "cyan",
     "services": [
       {
-        "id": "crest-certified-penetration-testing-services-in-uk",
-        "slug": "crest-certified-penetration-testing-services-in-uk",
-        "name": "CREST Certified Penetration Testing Services in UK",
-        "h1": "UK Penetration Testing Company, CREST-Accredited",
+        "id": "high-assurance-infrastructure-web-penetration-testing",
+        "slug": "high-assurance-infrastructure-web-penetration-testing",
+        "name": "High-Assurance Infrastructure & Web Penetration Testing",
+        "h1": "UK Penetration Testing Company, Elite Technical Assurance",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
-        "shortDesc": "RawSecLabs is a UK penetration testing company: CREST member, ISO 27001 and ISO 9001 certified (UKAS-accredited), and a PCI SSC QSA Company. Testing is delivered from the UK by senior consultants, never offshored, wit...",
-        "overview": "CREST-accredited penetration testing across the United Kingdom: web applications, external and internal networks, APIs, cloud and mobile, tested by senior CREST-certified consultants and reported in a form your clients, auditors and insurers accept without follow-up questions.",
+        "badge": "NIST Aligned",
+        "shortDesc": "RawSecLabs delivers high-assurance penetration testing across the United Kingdom: web applications, external and internal networks, APIs, cloud and mobile, tested by senior consultants with industry-standard methodologies and reported in a form your clients, auditors and insurers accept without follow-up questions.",
+        "overview": "Professional penetration testing across the United Kingdom: web applications, external and internal networks, APIs, cloud and mobile, tested by senior consultants using NIST, OWASP, and PTES frameworks and reported in a form your clients, auditors and insurers accept without follow-up questions.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -57,7 +57,7 @@ export const CATEGORIES: ServiceCategory[] = [
           "Reduces financial liability and reputational damage resulting from data breaches"
         ],
         "whoNeedsThis": [
-          "CREST-format compliance attestation for audit evidence",
+          "Industry-standard compliance attestation for audit evidence",
           "Live findings walk-through with your technical team",
           "Remediation retest of critical and high findings",
           "\u2713 Scoping call. A 30-minute call to define scope, timeline, and authorisation boundaries.",
@@ -65,7 +65,7 @@ export const CATEGORIES: ServiceCategory[] = [
         ],
         "deliverables": [
           "RSL Signals",
-          "Signed rules of engagement aligned to CREST guidance",
+          "Signed rules of engagement aligned to NIST and OWASP guidance",
           "Executive summary for board and management consumption",
           "Detailed technical findings with exploitation evidence",
           "CVSS-rated and exploitability-prioritised findings",
@@ -96,14 +96,14 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
         "faqs": [
           {
-            "question": "What is the typical turnaround time for CREST Certified Penetration Testing Services in UK?",
-            "answer": "Typical engagements for CREST Certified Penetration Testing Services in UK range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
+            "question": "What is the typical turnaround time for High-Assurance Infrastructure & Web Penetration Testing?",
+            "answer": "Typical engagements for High-Assurance Infrastructure & Web Penetration Testing range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
           },
           {
             "question": "How does RawSecLabs prevent disruptions during testing?",
@@ -122,8 +122,8 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Web Application Penetration Testing Services",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
-        "shortDesc": "RawSecLabs delivers CREST-certified web application penetration testing covering the OWASP Top 10, OWASP API Security Top 10, business logic flaws, authentication and session weaknesses, and the language-specific issu...",
+        "badge": "NIST Aligned",
+        "shortDesc": "RawSecLabs delivers professional web application penetration testing covering the OWASP Top 10, OWASP API Security Top 10, business logic flaws, authentication and session weaknesses, and the language-specific issu...",
         "overview": "Web applications carry the majority of business risk for most modern organisations, customer-facing portals, internal admin systems, B2B platforms, API gateways, e-commerce checkouts. Each is a target for adversaries and a focus area for compliance auditors. Web application penetration testing is how you find the vulnerabilities before either does.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -171,7 +171,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -197,7 +197,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Expert Digital Security Services | RawSecLabs",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "RawSecLabs works with organisations across finance, SaaS, healthcare, e-commerce and critical infrastructure to identify and close security gaps before attackers do. Our services span offensive testing (penetration te...",
         "overview": "Find top Digital Security services by RawSecLabs. From penetration testing to incident response, we help secure businesses with trusted solutions.",
         "whyItMatters": [
@@ -246,7 +246,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -264,7 +264,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "AI &amp; LLM Penetration Testing",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "RawSecLabs tests AI and LLM applications against the OWASP Top 10 for LLM Applications (2025) and the NIST AI Risk Management Framework, combining adversarial prompt engineering with the deep application and infrastru...",
         "overview": "LLM-powered features fail in ways traditional application testing never checks for. Prompt injection, data leakage through the model, poisoned retrieval, and agents that can be talked into using their tools against you are live risks the moment you ship an AI feature, and a standard web-app pentest will walk straight past all of them.",
         "whyItMatters": [
@@ -313,7 +313,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -339,9 +339,9 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Penetration Testing Services in the US",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "US organisations engage RawSecLabs for the same reason UK enterprises do: senior-only testing, fixed-fee scoping, and reports written for the people who read them, SOC 2 auditors, enterprise procurement, boards and in...",
-        "overview": "Accredited penetration testing for US organisations: web applications, networks, APIs, cloud and mobile, delivered remote-first across US time zones by senior CREST-certified consultants, with reporting formatted for SOC 2 auditors, enterprise procurement and cyber insurers.",
+        "overview": "Accredited penetration testing for US organisations: web applications, networks, APIs, cloud and mobile, delivered remote-first across US time zones by senior industry-standard consultants, with reporting formatted for SOC 2 auditors, enterprise procurement and cyber insurers.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -349,7 +349,7 @@ export const CATEGORIES: ServiceCategory[] = [
           "Reduces financial liability and reputational damage resulting from data breaches"
         ],
         "whoNeedsThis": [
-          "CREST-format compliance attestation for audit evidence",
+          "Industry-standard compliance attestation for audit evidence",
           "Live findings walk-through with your technical team",
           "Remediation retest of critical and high findings",
           "\u2713 Scoping call. A 30-minute call to define scope, timeline, and authorisation boundaries.",
@@ -357,7 +357,7 @@ export const CATEGORIES: ServiceCategory[] = [
         ],
         "deliverables": [
           "RSL Signals",
-          "Signed rules of engagement aligned to CREST guidance",
+          "Signed rules of engagement aligned to NIST and OWASP guidance",
           "Executive summary for board and management consumption",
           "Detailed technical findings with exploitation evidence",
           "CVSS-rated and exploitability-prioritised findings",
@@ -388,7 +388,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -414,7 +414,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Google Cloud (GCP) Penetration Testing Services",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "RawSecLabs delivers specialised GCP penetration testing aligned to Google's customer-side testing guidance. Our testers combine deep GCP expertise (cloud engineers who happen to be offensive security practitioners) wi...",
         "overview": "Google Cloud Platform environments require GCP-specific testing methodology. The attack surface centres on IAM and service accounts, GKE workload identity, Cloud Storage bucket configurations, Compute Engine metadata exposure, and the cross-service interactions that create realistic attack paths through GCP estates.",
         "whyItMatters": [
@@ -463,7 +463,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -489,7 +489,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "AWS Penetration Testing Services",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "RawSecLabs delivers specialised AWS penetration testing aligned to AWS's own customer-side testing policy. Our testers combine deep AWS expertise (cloud architects who happen to be offensive security practitioners) wi...",
         "overview": "AWS environments require fundamentally different testing methodology from traditional on-premise infrastructure. The attack surface is not just exposed services, it is IAM policies, S3 bucket ACLs, EC2 instance metadata, Lambda execution roles, EKS RBAC, and the dozens of subtle interactions between AWS services that create realistic attack paths.",
         "whyItMatters": [
@@ -538,7 +538,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -564,8 +564,8 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Mobile App Penetration Testing Services",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
-        "shortDesc": "RawSecLabs delivers CREST-certified mobile penetration testing for iOS and Android applications, covering the OWASP Mobile Top 10 plus the realistic attack scenarios platform-specific testing rarely covers. Our method...",
+        "badge": "NIST Aligned",
+        "shortDesc": "RawSecLabs delivers professional mobile penetration testing for iOS and Android applications, covering the OWASP Mobile Top 10 plus the realistic attack scenarios platform-specific testing rarely covers. Our method...",
         "overview": "Mobile applications combine the attack surface of traditional clients (local code, local storage, on-device interactions) with the attack surface of the API backends they call. Effective mobile pentesting must cover both, and the practical attack scenarios that combine them (token theft via local storage, certificate pinning bypass, API abuse from a compromised client).",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -613,7 +613,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -639,8 +639,8 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Network Penetration Testing Services",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
-        "shortDesc": "RawSecLabs delivers CREST-certified network penetration testing across internal, external, and segmentation testing scenarios. Our testers combine manual exploitation depth with breadth across the technologies you act...",
+        "badge": "NIST Aligned",
+        "shortDesc": "RawSecLabs delivers professional network penetration testing across internal, external, and segmentation testing scenarios. Our testers combine manual exploitation depth with breadth across the technologies you act...",
         "overview": "Network penetration testing simulates the activity of an external attacker probing your internet-facing infrastructure, or an internal attacker who has gained a foothold on your network. Both scenarios remain among the most common attack vectors in real-world breaches, and both demand more depth than vulnerability scanning alone can provide.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -688,7 +688,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -714,9 +714,9 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Find the Weaknesses Before an Attacker Does",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "Tell us what you need tested and we will come back within one business day with scope, timeline and a fixed fee.",
-        "overview": "Manual, intelligence-led penetration testing from CREST-accredited, senior consultants. We test your applications, APIs, network and cloud the way a real attacker would, then hand you a clear, prioritised report you can act on.",
+        "overview": "Manual, intelligence-led penetration testing from elite, senior consultants. We test your applications, APIs, network and cloud the way a real attacker would, then hand you a clear, prioritised report you can act on.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -763,7 +763,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -789,9 +789,9 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Independent security testing that regulators and customers trust",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "We just need a few details to scope your project. You can expect a response the same business day.",
-        "overview": "A Global CREST member consultancy delivering security testing globally: penetration testing, red team assessments, and compliance, PCI DSS QSA, SOC&nbsp;2, and ISO&nbsp;27001. Senior testers, manual testing, executive and technical reports, retest included.",
+        "overview": "A Global elite consultancy delivering security testing globally: penetration testing, red team assessments, and compliance, PCI DSS mapping support, SOC&nbsp;2, and ISO&nbsp;27001. Senior testers, manual testing, executive and technical reports, retest included.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -835,7 +835,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -861,7 +861,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "h1": "Penetration Testing as a Service (PTaaS)",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
-        "badge": "CREST Aligned",
+        "badge": "NIST Aligned",
         "shortDesc": "RawSecLabs delivers penetration testing as a service: continuous, human-led testing aligned to your release cadence rather than your budget cycle, with findings delivered as you go and remediation retested rather than...",
         "overview": "A once-a-year pentest is a snapshot of a system that no longer exists by the time you read the PDF. Your attack surface changes weekly, new features, new APIs, new cloud config, and the gap between each change and your next scheduled test is exactly where exposure lives.",
         "whyItMatters": [
@@ -910,7 +910,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -996,7 +996,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1070,7 +1070,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1097,7 +1097,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Red Team & Adversary Simulation",
         "categorySlug": "red-team-adversary-simulation",
         "badge": "RawSec Assurance",
-        "shortDesc": "Delivered by RawSecLabs: CREST member, PCI SSC QSA Company, ISO 27001 and 9001 certified (UKAS-accredited). Ethical, authorised, aggregate-reported, we measure organisational resilience, never individual failure.",
+        "shortDesc": "Delivered by RawSecLabs: an elite security consultancy, ISO 27001 and 9001 certified (UKAS-accredited). Ethical, authorised, aggregate-reported, we measure organisational resilience, never individual failure.",
         "overview": "Most breaches start with a person, not a port. We test the human attack surface the way real attackers do, targeted phishing, pretexting, MFA-fatigue, physical access, then report in aggregate and hand you the fixes that actually reduce risk.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -1144,7 +1144,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1171,7 +1171,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Red Team & Adversary Simulation",
         "categorySlug": "red-team-adversary-simulation",
         "badge": "RawSec Assurance",
-        "shortDesc": "Delivered by RawSecLabs: CREST member, PCI SSC QSA Company, ISO 27001 and 9001 certified (UKAS-accredited). Senior operators who build detections as fluently as they bypass them, so you leave with working rules, not a...",
+        "shortDesc": "Delivered by RawSecLabs: an elite security consultancy, ISO 27001 and 9001 certified (UKAS-accredited). Senior operators who build detections as fluently as they bypass them, so you leave with working rules, not a...",
         "overview": "Red teams tell you where your detection gaps are. A purple team closes them with you, in the room, in real time. We run ATT&amp;CK-mapped techniques against your live environment alongside your SOC, tune the detections that miss, and re-run them until they fire.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -1218,7 +1218,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1245,7 +1245,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Red Team & Adversary Simulation",
         "categorySlug": "red-team-adversary-simulation",
         "badge": "RawSec Assurance",
-        "shortDesc": "Delivered by RawSecLabs: CREST member, PCI SSC QSA Company, ISO 27001 and 9001 certified (UKAS-accredited). Intelligence-led scenarios as a scoped deliverable, never a platform subscription, and your engagement data n...",
+        "shortDesc": "Delivered by RawSecLabs: an elite security consultancy, ISO 27001 and 9001 certified (UKAS-accredited). Intelligence-led scenarios as a scoped deliverable, never a platform subscription, and your engagement data n...",
         "overview": "Generic red teams run a generic playbook. We start from the threat actors actually targeting your sector, emulate their tactics end to end, and show you exactly how far a realistic, funded adversary gets before your defences stop them.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -1292,7 +1292,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1378,7 +1378,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1453,7 +1453,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1528,7 +1528,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1603,7 +1603,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1689,7 +1689,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1764,7 +1764,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1791,7 +1791,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Blockchain & Web3 Security",
         "categorySlug": "blockchain-web3-security",
         "badge": "RawSec Assurance",
-        "shortDesc": "RawSecLabs is a CREST-accredited cryptocurrency security company working with exchanges, wallet providers, custodians, and DeFi protocols. We cover wallet security, smart contract review, custody assessment, key manag...",
+        "shortDesc": "RawSecLabs is an elite cryptocurrency security company working with exchanges, wallet providers, custodians, and DeFi protocols. We cover wallet security, smart contract review, custody assessment, key manag...",
         "overview": "Digital wallets are at the core of cryptocurrency adoption, enabling users to store, send, and receive digital assets securely. However, with increasing threats such as phishing attacks, malware, private key theft, and unauthorized access, wallet security has become more critical than ever. At RawSecLabs, we provide advanced Wallet Security Services to safeguard both individual users and organisations from financial loss and cyberattacks. Our team of blockchain security speci",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -1839,7 +1839,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1914,7 +1914,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -1989,7 +1989,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2064,7 +2064,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2150,7 +2150,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2225,7 +2225,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2300,7 +2300,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2375,7 +2375,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2450,7 +2450,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2524,7 +2524,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2598,7 +2598,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2673,7 +2673,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2748,7 +2748,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2775,7 +2775,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Compliance & Audit",
         "categorySlug": "compliance-audit",
         "badge": "RawSec Assurance",
-        "shortDesc": "RawSecLabs is an IASME-licensed Certification Body for Cyber Essentials, with Plus assessments launching soon, backed by the same CREST-accredited security team that delivers our penetration testing, PCI DSS and ISO 2...",
+        "shortDesc": "RawSecLabs is an IASME-licensed Certification Body for Cyber Essentials, with Plus assessments launching soon, backed by the same elite security team that delivers our penetration testing, PCI DSS mapping and ISO 2...",
         "overview": "Cyber Essentials is the UK Government-backed certification scheme, owned by the National Cyber Security Centre (NCSC) and delivered by IASME, that verifies your organisation has five fundamental technical controls in place against the most common internet-based attacks.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -2822,7 +2822,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2897,7 +2897,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -2917,15 +2917,15 @@ export const CATEGORIES: ServiceCategory[] = [
         ]
       },
       {
-        "id": "pci-dss-qsa-company",
-        "slug": "pci-dss-qsa-company",
-        "name": "PCI DSS QSA Company",
-        "h1": "PCI DSS QSA Assessments &amp; Compliance Services",
+        "id": "pci-dss-compliance-mapping-pre-audit-assessment",
+        "slug": "pci-dss-compliance-mapping-pre-audit-assessment",
+        "name": "PCI DSS Compliance Mapping & Pre-Audit Assessment",
+        "h1": "PCI DSS Compliance Mapping &amp; Pre-Audit Assessment Services",
         "category": "Compliance & Audit",
         "categorySlug": "compliance-audit",
         "badge": "RawSec Assurance",
-        "shortDesc": "As a PCI SSC Qualified Security Assessor (QSA) Company, RawSecLabs delivers PCI DSS v4.0.1 services across the full programme lifecycle: scope definition, gap analysis, remediation support, Report on Compliance (ROC) ...",
-        "overview": "PCI DSS is the global standard for protecting cardholder data. Every organisation that stores, processes, or transmits payment card information must comply, from corner-shop merchants to global payment service providers. Non-compliance is not optional: fines, increased transaction costs, and acquiring bank action follow quickly after a missed assessment.",
+        "shortDesc": "Our technical assessments are mapped precisely to meet PCI DSS Requirement 11.4 controls, ensuring your environment is fully prepared to clear official QSA audits. RawSecLabs delivers PCI DSS v4.0.1 readiness services across the full programme lifecycle: scope definition, gap analysis, remediation support, and pre-audit assessment.",
+        "overview": "PCI DSS is the global standard for protecting cardholder data. Every organisation that stores, processes, or transmits payment card information must comply, from corner-shop merchants to global payment service providers. Non-compliance is not optional: fines, increased transaction costs, and acquiring bank action follow quickly after a missed assessment. Our technical testing maps directly to the PCI Security Standards Council controls to facilitate client compliance.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -2971,14 +2971,14 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
         "faqs": [
           {
-            "question": "What is the typical turnaround time for PCI DSS QSA Company?",
-            "answer": "Typical engagements for PCI DSS QSA Company range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
+            "question": "What is the typical turnaround time for PCI DSS Compliance Mapping & Pre-Audit Assessment?",
+            "answer": "Typical engagements for PCI DSS Compliance Mapping & Pre-Audit Assessment range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
           },
           {
             "question": "How does RawSecLabs prevent disruptions during testing?",
@@ -3046,7 +3046,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3066,15 +3066,15 @@ export const CATEGORIES: ServiceCategory[] = [
         ]
       },
       {
-        "id": "pci-asv-scanning-services",
-        "slug": "pci-asv-scanning-services",
-        "name": "PCI ASV Scanning Services",
-        "h1": "PCI ASV Scanning Services",
+        "id": "vulnerability-management-pci-aligned-scanning-support",
+        "slug": "vulnerability-management-pci-aligned-scanning-support",
+        "name": "Vulnerability Management & PCI-Aligned Scanning Support",
+        "h1": "Vulnerability Management &amp; PCI-Aligned Scanning Support Services",
         "category": "Compliance & Audit",
         "categorySlug": "compliance-audit",
         "badge": "RawSec Assurance",
-        "shortDesc": "RawSecLabs, a PCI SSC QSA Company, delivers quarterly ASV scans in partnership with an SSC-Approved Scanning Vendor: scheduled scans, rapid re-scans after remediation, and the formal attestation reports your acquirer ...",
-        "overview": "PCI DSS Requirement 11.3.2 requires every merchant, service provider, and acquirer with externally-facing systems in the cardholder data environment to obtain quarterly external vulnerability scans from a PCI SSC Approved Scanning Vendor (ASV). The scans must produce a passing result, with all medium and higher severity vulnerabilities resolved or compensated.",
+        "shortDesc": "RawSecLabs delivers comprehensive vulnerability management and PCI-aligned scanning support: scheduled scans, rapid re-scans after remediation, and the formal attestation reports your acquirer requires. Our testing maps directly to PCI DSS Requirement 11.4 controls to facilitate client compliance.",
+        "overview": "PCI DSS Requirement 11.3.2 requires every merchant, service provider, and acquirer with externally-facing systems in the cardholder data environment to obtain quarterly external vulnerability scans. The scans must produce a passing result, with all medium and higher severity vulnerabilities resolved or compensated. Our technical assessments are mapped precisely to meet PCI DSS controls to ensure your environment is fully prepared for official audits.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -3090,10 +3090,10 @@ export const CATEGORIES: ServiceCategory[] = [
         ],
         "deliverables": [
           "RSL Signals",
-          "Quarterly ASV scan reports in PCI SSC format",
+          "Quarterly ASV scan reports in PCI DSS-aligned format",
           "Attestation of Scan Compliance (AOSC) per quarter",
           "Detailed vulnerability findings with CVSS scoring",
-          "False positive dispute support with PCI SSC",
+          "False positive dispute support for PCI DSS compliance",
           "Remediation guidance for every finding"
         ],
         "methodology": [
@@ -3121,14 +3121,14 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
         "faqs": [
           {
-            "question": "What is the typical turnaround time for PCI ASV Scanning Services?",
-            "answer": "Typical engagements for PCI ASV Scanning Services range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
+            "question": "What is the typical turnaround time for Vulnerability Management & PCI-Aligned Scanning Support?",
+            "answer": "Typical engagements for Vulnerability Management & PCI-Aligned Scanning Support range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
           },
           {
             "question": "How does RawSecLabs prevent disruptions during testing?",
@@ -3207,7 +3207,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3234,8 +3234,8 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Data Protection & Resilience",
         "categorySlug": "data-protection-resilience",
         "badge": "RawSec Assurance",
-        "shortDesc": "RawSecLabs delivers DORA TLPT and the wider DORA penetration testing programme that significant and non-significant DORA-in-scope entities require. Our methodology is aligned to framework, our consultants are CREST-ac...",
-        "overview": "DORA Article 26 requires significant financial entities to undergo Threat-Led Penetration Testing (TLPT) at least every three years. TLPT under DORA is closer to than to standard CREST pen testing, intelligence-led, scenario-driven, and scoped against the production environment, with a structured threat intelligence phase preceding the red team activity.",
+        "shortDesc": "RawSecLabs delivers DORA TLPT and the wider DORA penetration testing programme that significant and non-significant DORA-in-scope entities require. Our methodology is aligned to framework, our consultants are industry-standard...",
+        "overview": "DORA Article 26 requires significant financial entities to undergo Threat-Led Penetration Testing (TLPT) at least every three years. TLPT under DORA is closer to than to standard professional pen testing, intelligence-led, scenario-driven, and scoped against the production environment, with a structured threat intelligence phase preceding the red team activity.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -3282,7 +3282,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3356,7 +3356,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3431,7 +3431,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3506,7 +3506,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3581,7 +3581,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3667,7 +3667,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3742,7 +3742,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3817,7 +3817,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3892,7 +3892,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -3930,7 +3930,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Advisory & vCISO",
         "categorySlug": "advisory-vciso",
         "badge": "RawSec Assurance",
-        "shortDesc": "RawSecLabs delivers continuous vulnerability assessment services using CREST-accredited methodology, combining authenticated scanning, manual validation, exploitability analysis, and prioritised reporting that drives ...",
+        "shortDesc": "RawSecLabs delivers continuous vulnerability assessment services using industry-standard methodology, combining authenticated scanning, manual validation, exploitability analysis, and prioritised reporting that drives ...",
         "overview": "Vulnerability assessment is the foundation of every credible cybersecurity programme, the disciplined identification, prioritisation, and remediation tracking of weaknesses across your network, applications, and cloud environments. Most breaches still trace back to unpatched vulnerabilities that existed months before the incident.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
@@ -3978,7 +3978,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -4053,7 +4053,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -4128,7 +4128,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -4203,7 +4203,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -4278,7 +4278,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -4353,7 +4353,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
@@ -4428,7 +4428,7 @@ export const CATEGORIES: ServiceCategory[] = [
         "compliance": [
           "ISO 27001",
           "SOC 2 Type II",
-          "CREST",
+          "NIST",
           "NIST CSF",
           "OWASP Top 10"
         ],
