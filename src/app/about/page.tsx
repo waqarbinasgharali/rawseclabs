@@ -15,8 +15,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About RawSecLabs | Global Premium Cyber Security & Penetration Testing Consultancy',
-  description: 'About RawSecLabs: an elite technical security consultancy providing high-assurance penetration testing and audit-ready compliance frameworks for global enterprises.',
+  title: 'About RawSecLabs | Waqar Asghar | Global Premium Cyber Security & Penetration Testing Consultancy',
+  description: 'About RawSecLabs and founder Waqar Asghar: an elite technical security consultancy providing high-assurance penetration testing and audit-ready compliance frameworks for global enterprises.',
   alternates: {
     canonical: 'https://www.rawseclabs.com/about',
   },
@@ -107,8 +107,13 @@ export default function AboutPage() {
                 Waqar Asghar
               </h2>
               <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-                Waqar leads the firm from London. He still does technical work alongside the consulting team and writes for the RawSecLabs research publication. The combination of practitioner experience and business leadership is the differentiator he wanted RawSecLabs to be built around.
+                Waqar leads the firm from Toronto. He still does technical work alongside the consulting team and writes for the RawSecLabs research publication. The combination of practitioner experience and business leadership is the differentiator he wanted RawSecLabs to be built around.
               </p>
+              <div className="flex items-center gap-2 pt-2">
+                <a href="https://linkedin.com/in/waqarasghar" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
+                  LinkedIn Profile
+                </a>
+              </div>
             </div>
             <div className="flex-1 space-y-4">
               <div className="flex items-center gap-2 text-xs font-mono text-cyan-400">
@@ -119,7 +124,7 @@ export default function AboutPage() {
                   <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
                   <div>
                     <p className="text-sm font-semibold text-slate-900 dark:text-white">Headquarters</p>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">124 City Road, London, EC1V 2NX, United Kingdom</p>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">Toronto, Ontario, Canada</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

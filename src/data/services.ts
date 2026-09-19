@@ -48,8 +48,8 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
         "badge": "NIST Aligned",
-        "shortDesc": "RawSecLabs delivers high-assurance penetration testing across the United Kingdom: web applications, external and internal networks, APIs, cloud and mobile, tested by senior consultants with industry-standard methodologies and reported in a form your clients, auditors and insurers accept without follow-up questions.",
-        "overview": "Professional penetration testing across the United Kingdom: web applications, external and internal networks, APIs, cloud and mobile, tested by senior consultants using NIST, OWASP, and PTES frameworks and reported in a form your clients, auditors and insurers accept without follow-up questions.",
+        "shortDesc": "RawSecLabs delivers high-assurance penetration testing globally: web applications, external and internal networks, APIs, cloud and mobile, tested by senior consultants with industry-standard methodologies and reported in a form your clients, auditors and insurers accept without follow-up questions.",
+        "overview": "Professional penetration testing globally: web applications, external and internal networks, APIs, cloud and mobile, tested by senior consultants using NIST, OWASP, and PTES frameworks and reported in a form your clients, auditors and insurers accept without follow-up questions.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -340,8 +340,8 @@ export const CATEGORIES: ServiceCategory[] = [
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
         "badge": "NIST Aligned",
-        "shortDesc": "US organisations engage RawSecLabs for the same reason UK enterprises do: senior-only testing, fixed-fee scoping, and reports written for the people who read them, SOC 2 auditors, enterprise procurement, boards and in...",
-        "overview": "Accredited penetration testing for US organisations: web applications, networks, APIs, cloud and mobile, delivered remote-first across US time zones by senior industry-standard consultants, with reporting formatted for SOC 2 auditors, enterprise procurement and cyber insurers.",
+        "shortDesc": "Global organisations engage RawSecLabs for senior-only testing, fixed-fee scoping, and reports written for the people who read them, SOC 2 auditors, enterprise procurement, boards and in-house security teams.",
+        "overview": "Accredited penetration testing for global organisations: web applications, networks, APIs, cloud and mobile, delivered remote-first across international time zones by senior industry-standard consultants, with reporting formatted for SOC 2 auditors, enterprise procurement and cyber insurers.",
         "whyItMatters": [
           "Uncovers critical zero-day and business logic vulnerabilities missed by automated scanners",
           "Validates defensive posture against real-world threat actors targeting your sector",
@@ -558,9 +558,9 @@ export const CATEGORIES: ServiceCategory[] = [
         ]
       },
       {
-        "id": "mobile-app-penetration-testing-uk",
-        "slug": "mobile-app-penetration-testing-uk",
-        "name": "Mobile App Penetration Testing UK",
+        "id": "mobile-app-penetration-testing",
+        "slug": "mobile-app-penetration-testing",
+        "name": "Mobile App Penetration Testing",
         "h1": "Mobile App Penetration Testing Services",
         "category": "Penetration Testing",
         "categorySlug": "penetration-testing",
@@ -619,8 +619,8 @@ export const CATEGORIES: ServiceCategory[] = [
         ],
         "faqs": [
           {
-            "question": "What is the typical turnaround time for Mobile App Penetration Testing UK?",
-            "answer": "Typical engagements for Mobile App Penetration Testing UK range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
+            "question": "What is the typical turnaround time for Mobile App Penetration Testing?",
+            "answer": "Typical engagements for Mobile App Penetration Testing range from 5 to 15 business days depending on asset complexity, scope, and technical depth."
           },
           {
             "question": "How does RawSecLabs prevent disruptions during testing?",

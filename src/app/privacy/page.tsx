@@ -79,8 +79,8 @@ export default function PrivacyPolicyPage() {
           </h2>
           <div className="space-y-3 text-sm text-slate-600 dark:text-slate-300">
             <p><strong>Company Name:</strong> RawSecLabs Limited</p>
-            <p><strong>Registered Address:</strong> 124 City Road, London, EC1V 2NX, United Kingdom</p>
-            <p><strong>Company Registration:</strong> Registered in England and Wales</p>
+            <p><strong>Registered Address:</strong> Toronto, Ontario, Canada</p>
+            <p><strong>Company Registration:</strong> Registered in Canada</p>
             <p><strong>Data Protection Officer Contact:</strong> info@rawseclabs.com</p>
             <p><strong>General Contact:</strong> contact@rawseclabs.com</p>
           </div>
@@ -444,7 +444,7 @@ export default function PrivacyPolicyPage() {
               </div>
               <div className="flex items-center gap-2">
                 <ShieldAlert className="w-4 h-4 text-cyan-400" />
-                <span><strong>Address:</strong> 124 City Road, London, EC1V 2NX, United Kingdom</span>
+                <span><strong>Address:</strong> Toronto, Ontario, Canada</span>
               </div>
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400">

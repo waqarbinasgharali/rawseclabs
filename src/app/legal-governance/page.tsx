@@ -57,7 +57,7 @@ export default function LegalGovernancePage() {
               </div>
               <h3 className="text-base font-bold text-slate-900 dark:text-white">Corporate Governance</h3>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                RawSecLabs Limited is registered in the United Kingdom at 124 City Road, London, EC1V 2NX. The company operates under UK company law and maintains appropriate corporate governance structures.
+                RawSecLabs Limited is registered in Canada at Toronto, Ontario. The company operates under Canadian company law and maintains appropriate corporate governance structures.
               </p>
             </div>
 

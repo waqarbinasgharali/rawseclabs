@@ -251,7 +251,7 @@ export default async function IndustryDetailPage({ params }: { params: Promise<{
               href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
             >
-              <Phone className="w-5 h-5" />
+              {/* <Phone className="w-5 h-5" /> */}
               Contact Us
             </Link>
             <Link

@@ -1,9 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import type { Metadata } from 'next';
+import Link from 'next/link';
 import { 
-  PhoneCall, 
   Mail, 
   Lock, 
   Send, 
@@ -14,6 +13,8 @@ import {
   FileCheck
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/services';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -52,14 +53,16 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-32 pb-24 bg-slate-50 dark:bg-[#060911] min-h-screen relative">
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-1 pt-32 pb-24 bg-slate-50 dark:bg-[#060911] relative overflow-x-hidden">
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] radial-glow pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="max-w-3xl mb-16 space-y-4">
+        <div className="w-full max-w-3xl mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-600 dark:text-cyan-400">
             <Lock className="w-3.5 h-3.5" />
             CONFIDENTIAL SCOPING & CONSULTATION
@@ -68,7 +71,7 @@ export default function ContactPage() {
             Schedule a Pentest Consultation
           </h1>
           <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-            Speak directly with a senior offensive security specialist at <strong>RawSecLabs</strong> (<a href="https://www.rawseclabs.com" className="text-cyan-600 dark:text-cyan-400 hover:underline">www.rawseclabs.com</a>). All communications are protected under mutual Non-Disclosure Agreements.
+            Speak directly with a senior offensive security specialist at <strong>RawSecLabs</strong>. All communications are protected under mutual Non-Disclosure Agreements.
           </p>
         </div>
 
@@ -120,6 +123,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-white/[0.04] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-400"
                     />
                   </div>
+                  {/* Phone field temporarily disabled
                   <div>
                     <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">Direct Phone (Optional)</label>
                     <input
@@ -130,6 +134,7 @@ export default function ContactPage() {
                       className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-white/[0.04] border border-slate-300 dark:border-white/10 text-slate-900 dark:text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-400"
                     />
                   </div>
+                  */}
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -214,7 +219,6 @@ export default function ContactPage() {
             {/* 24/7 Incident Box */}
             <div className="p-8 rounded-3xl bg-rose-50 dark:bg-rose-950/30 border border-rose-300 dark:border-rose-500/40 space-y-4 shadow-2xl relative overflow-hidden">
               <div className="flex items-center gap-2 text-rose-400 text-xs font-mono font-bold">
-                <PhoneCall className="w-4 h-4 animate-pulse" />
                 <span>24/7 ACTIVE BREACH RESPONSE HOTLINE</span>
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white">Suspect an active cyber incident?</h3>
@@ -223,8 +227,11 @@ export default function ContactPage() {
               </p>
               <div className="p-4 rounded-xl bg-black/40 dark:bg-black/40 border border-rose-300 dark:border-rose-500/30 space-y-1 font-mono text-xs">
                 <span className="text-rose-600 dark:text-rose-400 font-bold block">Emergency IR Hotline:</span>
-                <span className="text-slate-900 dark:text-white text-sm font-extrabold">+44 (0) 20 8123 7990 / +1 (800) 492-7321</span>
-                <span className="text-slate-500 dark:text-slate-400 block text-[10px] mt-1">Direct Encrypted Dispatch: contact@rawseclabs.com</span>
+                {/* <span className="text-slate-900 dark:text-white text-sm font-extrabold">+44 (0) 20 8123 7990 / +1 (800) 492-7321</span> */}
+                <a href="mailto:breach@rawseclabs.com" className="text-slate-100 dark:text-white text-lg font-extrabold hover:text-cyan-400 dark:hover:text-cyan-300 transition-colors block mt-2">
+                  breach@rawseclabs.com
+                </a>
+                <span className="text-slate-500 dark:text-slate-400 block text-[10px] mt-1">Direct Encrypted Dispatch</span>
               </div>
             </div>
 
@@ -262,6 +269,8 @@ export default function ContactPage() {
         </div>
 
       </div>
+      </main>
+      <Footer />
     </div>
   );
 }

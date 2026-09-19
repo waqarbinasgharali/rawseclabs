@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, ShieldAlert, PhoneCall, Lock } from 'lucide-react';
+import { ArrowRight, ShieldAlert, Lock } from 'lucide-react';
 
 export default function CtaBanner() {
   return (

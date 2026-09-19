@@ -7,24 +7,26 @@ import { ThemeProvider } from '@/components/theme/ThemeProvider';
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.rawseclabs.com'),
   title: {
-    default: 'RawSecLabs | Advanced Penetration Testing & Bespoke Cybersecurity Assurance',
+    default: 'High-Assurance Penetration Testing & Cybersecurity | RawSecLabs',
     template: '%s | RawSecLabs'
   },
-  description: 'Expert penetration testing and technical security assessments tailored for enterprises and compliance requirements.',
+  description: 'Enterprise-grade penetration testing, red teaming, and technical compliance mapping tailored for global organizations. Threat-led assessments aligned with NIST, OWASP, and international frameworks.',
   keywords: [
     'RawSecLabs',
-    'penetration testing',
+    'global penetration testing services',
+    'enterprise cybersecurity assurance',
+    'threat led red teaming',
+    'nist aligned pentest',
+    'owasp web application security',
+    'soc 2 audit readiness',
+    'dora compliance testing',
+    'infrastructure vulnerability assessment',
     'adversary simulation',
-    'red team',
     'smart contract security',
-    'Global penetration testing',
-    'professional red teaming',
-    'industry standard pentest',
-    'corporate cyber security audit',
-    'SOC 2 compliance pentest',
-    'ISO 27001 audit evidence',
-    'web application pentest UK US',
-    'cloud pentest AWS GCP'
+    'blockchain security',
+    'cloud security assessment',
+    'penetration testing Toronto',
+    'cybersecurity Canada'
   ],
   authors: [{ name: 'RawSecLabs', url: 'https://www.rawseclabs.com' }],
   creator: 'RawSecLabs',
@@ -41,17 +43,26 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'RawSecLabs | Elite Penetration Testing & Cybersecurity Assurance',
-    description: 'Advanced penetration testing, adversary simulations, and enterprise security audits with zero false positives.',
+    title: 'High-Assurance Penetration Testing & Global Cybersecurity Solutions',
+    description: 'Enterprise-grade penetration testing, red teaming, and compliance mapping aligned with NIST and OWASP frameworks.',
     url: 'https://www.rawseclabs.com',
     siteName: 'RawSecLabs',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/logos/logos.png',
+        width: 1200,
+        height: 630,
+        alt: 'RawSecLabs - High Assurance Penetration Testing',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RawSecLabs | Offensive Security & Adversary Simulation',
-    description: 'Advanced penetration testing, adversary simulations, and enterprise security audits with zero false positives.',
+    title: 'High-Assurance Penetration Testing & Global Cybersecurity Solutions',
+    description: 'Enterprise-grade penetration testing and compliance mapping aligned with NIST and OWASP frameworks.',
+    images: ['/logos/logos.png'],
     creator: '@rawseclabs',
   },
   alternates: {
@@ -67,7 +78,37 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/logos/logos.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logos/logos.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "RawSecLabs",
+              "url": "https://www.rawseclabs.com",
+              "logo": "https://www.rawseclabs.com/logos/logos.png",
+              "description": "Enterprise-grade penetration testing, red teaming, and technical compliance mapping for global organizations.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Toronto",
+                "addressRegion": "Ontario",
+                "addressCountry": "Canada"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "contact@rawseclabs.com",
+                "contactType": "customer service",
+                "areaServed": "Global"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/rawseclabs",
+                "https://twitter.com/rawseclabs"
+              ]
+            })
+          }}
+        />
       </head>
       <body className="bg-slate-50 text-slate-900 dark:bg-[#060911] dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-cyan-500 selection:text-black">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>

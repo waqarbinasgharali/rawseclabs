@@ -79,8 +79,10 @@ export async function POST(request: NextRequest) {
             <p style="margin: 5px 0;">NDA Required: ${ndaRequired ? 'Yes' : 'No'}</p>
           </div>
 
-          <p>If you have an urgent matter, please contact our emergency hotline:</p>
-          <p style="color: #dc2626; font-weight: bold;">+44 (0) 20 8123 7990 / +1 (800) 492-7321</p>
+          <p>If you have an urgent matter, please contact our emergency email:</p>
+          <p style="color: #dc2626; font-weight: bold; font-size: 16px;">
+            <a href="mailto:breach@rawseclabs.com" style="color: #dc2626; text-decoration: none;">breach@rawseclabs.com</a>
+          </p>
           
           <p style="color: #64748b; font-size: 12px; margin-top: 30px;">
             RawSecLabs - Offensive Security & Adversary Simulation
