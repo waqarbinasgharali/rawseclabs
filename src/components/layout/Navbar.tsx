@@ -42,6 +42,9 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [mobileIndustriesOpen, setMobileIndustriesOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -59,6 +62,9 @@ export default function Navbar() {
       setServicesOpen(false);
       setIndustriesOpen(false);
       setResourcesOpen(false);
+      setMobileServicesOpen(false);
+      setMobileIndustriesOpen(false);
+      setMobileResourcesOpen(false);
     }, 0);
     return () => clearTimeout(timer);
   }, [pathname]);
@@ -403,36 +409,104 @@ export default function Navbar() {
             >
               Home
             </Link>
-            <Link
-              href="/services"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
-            >
-              All Services (60+)
-            </Link>
-            <Link
-              href="/industries"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
-            >
-              Industries
-            </Link>
+            
+            {/* Services Dropdown */}
+            <div>
+              <button
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+              >
+                <span>All Services (60+)</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileServicesOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {CATEGORIES.map((cat) => (
+                    <Link
+                      key={cat.id}
+                      href={`/services/${cat.slug}`}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+                    >
+                      {categoryIcons[cat.slug] || <ShieldAlert className="w-4 h-4 text-cyan-400" />}
+                      <span>{cat.name}</span>
+                      <span className="text-xs text-slate-500 ml-auto">({cat.services.length})</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Industries Dropdown */}
+            <div>
+              <button
+                onClick={() => setMobileIndustriesOpen(!mobileIndustriesOpen)}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+              >
+                <span>Industries</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileIndustriesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileIndustriesOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {INDUSTRIES.map((industry) => (
+                    <Link
+                      key={industry.id}
+                      href={`/industries/${industry.slug}`}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+                    >
+                      <span className="text-lg">{industry.icon}</span>
+                      <span>{industry.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/assessment"
               className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
               Scope Estimator Tool
             </Link>
+
             <Link
               href="/rsl-signals"
               className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
             >
               RSL Signals
             </Link>
-            <Link
-              href="/resources"
-              className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
-            >
-              Resources
-            </Link>
+
+            {/* Resources Dropdown */}
+            <div>
+              <button
+                onClick={() => setMobileResourcesOpen(!mobileResourcesOpen)}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+              >
+                <span>Resources</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {mobileResourcesOpen && (
+                <div className="ml-4 mt-1 space-y-1">
+                  {[
+                    { icon: BookOpen, title: 'About Us', href: '/about' },
+                    { icon: FileText, title: 'Publications', href: '/resources/publications' },
+                    { icon: Newspaper, title: 'Media Coverage', href: '/resources/media-coverage' },
+                    { icon: Search, title: 'Research Lab', href: '/resources/research-lab' },
+                    { icon: CheckCircle, title: 'Sample Report', href: '/resources/sample-report' },
+                    { icon: Users, title: 'Careers', href: '/resources/careers' }
+                  ].map((resource) => (
+                    <Link
+                      key={resource.href}
+                      href={resource.href}
+                      className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
+                    >
+                      <resource.icon className="w-4 h-4 text-cyan-400" />
+                      <span>{resource.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               href="/contact"
               className="block px-3 py-2 rounded-lg text-base font-medium text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-cyan-600 dark:hover:text-cyan-400"
