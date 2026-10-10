@@ -13,8 +13,6 @@ import {
   FileCheck
 } from 'lucide-react';
 import { CATEGORIES } from '@/data/services';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -53,9 +51,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-1 pt-32 pb-24 bg-slate-50 dark:bg-[#060911] relative overflow-x-hidden">
+    <>
+    <main className="pt-32 pb-24 bg-slate-50 dark:bg-[#060911] relative overflow-x-hidden">
       <div className="absolute inset-0 cyber-grid opacity-20 pointer-events-none" />
       <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[800px] h-[400px] radial-glow pointer-events-none" />
 
@@ -270,7 +267,6 @@ export default function ContactPage() {
 
       </div>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }
