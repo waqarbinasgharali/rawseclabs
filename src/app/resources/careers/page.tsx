@@ -12,7 +12,7 @@ export default function CareersPage() {
     {
       title: 'Senior Penetration Tester',
       practice: 'Offensive Security',
-      location: 'London / Hybrid',
+      location: 'Remote',
       type: 'Full-time',
       level: 'Senior',
       description: 'Lead penetration testing engagements across web, network, and cloud. Industry-standard methodology following NIST and OWASP frameworks. Senior consultants only, no junior pass-through team.',
@@ -26,7 +26,7 @@ export default function CareersPage() {
     {
       title: 'Enterprise Cyber Security & Compliance Consultant',
       practice: 'Compliance',
-      location: 'London / Hybrid',
+      location: 'Remote',
       type: 'Full-time',
       level: 'Senior',
       description: 'Deliver PCI DSS compliance mapping and pre-audit assessments across UK, US, and Middle East. Mix of gap assessments, readiness reviews, and technical compliance testing.',
@@ -40,7 +40,7 @@ export default function CareersPage() {
     {
       title: 'Senior Incident Response Consultant',
       practice: 'Incident Response',
-      location: 'London / On-call',
+      location: 'Remote',
       type: 'Full-time',
       level: 'Senior',
       description: 'Lead investigations across ransomware, BEC, data exfiltration, and post-breach forensics. Retainer client base plus emergency response.',
@@ -54,7 +54,7 @@ export default function CareersPage() {
     {
       title: 'SOC 2 / ISO 27001 Consultant',
       practice: 'Compliance',
-      location: 'London / Hybrid',
+      location: 'Remote',
       type: 'Full-time',
       level: 'Mid-Senior',
       description: 'Lead SOC 2 and ISO 27001 programmes for SaaS, fintech, and regulated tech firms. Combined-framework delivery, evidence reuse across audits.',
@@ -68,8 +68,8 @@ export default function CareersPage() {
     {
       title: 'Mid-Level Penetration Tester',
       practice: 'Offensive Security',
-      location: 'Karachi & Islamabad',
-      type: 'Full-time',
+      location: 'Remote',
+      type: 'Full-time / Contract',
       level: 'Mid-Level',
       description: 'Join our penetration testing team working across web applications, mobile apps, and network security assessments.',
       requirements: [
