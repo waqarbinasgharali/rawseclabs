@@ -70,7 +70,7 @@ export default function Footer() {
 
             <div className="pt-2 space-y-2 text-xs">
               <div className="flex items-center gap-3">
-                <a href="https://linkedin.com/company/rawseclabs" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
+                <a href="https://www.linkedin.com/company/rawseclabs" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/30 transition-all">
                   <LinkedInIcon />
                 </a>
                 <a href="https://twitter.com/rawseclabs" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 hover:border-cyan-500/30 transition-all">

@@ -110,7 +110,7 @@ export default function AboutPage() {
                 Waqar leads the firm from Toronto. He still does technical work alongside the consulting team and writes for the RawSecLabs research publication. The combination of practitioner experience and business leadership is the differentiator he wanted RawSecLabs to be built around.
               </p>
               <div className="flex items-center gap-2 pt-2">
-                <a href="https://linkedin.com/in/waqarasghar" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
+                <a href="https://www.linkedin.com/in/waqarasgharali" target="_blank" rel="noopener noreferrer" className="text-xs text-cyan-600 dark:text-cyan-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
                   LinkedIn Profile
                 </a>
               </div>
