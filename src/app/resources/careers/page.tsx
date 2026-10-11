@@ -102,13 +102,13 @@ export default function CareersPage() {
               We hire people who treat cybersecurity as a craft and want to spend their career deepening it. Real client engagements, real technical depth, no junior pass-through.
             </p>
             
-            <Link
-              href="/contact"
+            <a
+              href="mailto:info@rawseclabs.com?subject=Career%20Inquiry"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-500 text-black font-bold hover:shadow-lg hover:shadow-cyan-500/20 transition-all"
             >
               Send Your CV
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
